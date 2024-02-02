@@ -1,0 +1,931 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Access to an undefined property App\\\\Auth\\\\CanResetPassword\\:\\:\\$otp\\.$#"
+			count: 1
+			path: app/Auth/PasswordBroker.php
+
+		-
+			message: "#^Call to an undefined method App\\\\Auth\\\\TokenRepositoryInterface\\:\\:getToken\\(\\)\\.$#"
+			count: 1
+			path: app/Auth/PasswordBroker.php
+
+		-
+			message: "#^Method App\\\\Auth\\\\PasswordBroker\\:\\:getToken\\(\\) should return string but returns Illuminate\\\\Contracts\\\\Auth\\\\Authenticatable\\|null\\.$#"
+			count: 1
+			path: app/Auth/PasswordBroker.php
+
+		-
+			message: "#^Method App\\\\Auth\\\\PasswordBroker\\:\\:validateReset\\(\\) should return Illuminate\\\\Contracts\\\\Auth\\\\CanResetPassword\\|string but returns App\\\\Auth\\\\CanResetPassword\\.$#"
+			count: 1
+			path: app/Auth/PasswordBroker.php
+
+		-
+			message: "#^PHPDoc tag @param for parameter \\$user with type Illuminate\\\\Contracts\\\\Auth\\\\CanResetPassword is not subtype of native type App\\\\Auth\\\\CanResetPassword\\.$#"
+			count: 3
+			path: app/Auth/PasswordBroker.php
+
+		-
+			message: "#^PHPDoc tag @param references unknown parameter\\: \\$token$#"
+			count: 1
+			path: app/Auth/PasswordBroker.php
+
+		-
+			message: "#^Parameter \\#1 \\$user of static method App\\\\Services\\\\Auth\\\\OtpService\\:\\:generateOTP\\(\\) expects App\\\\Models\\\\Auth\\\\User, App\\\\Auth\\\\CanResetPassword given\\.$#"
+			count: 1
+			path: app/Auth/PasswordBroker.php
+
+		-
+			message: "#^Parameter \\#1 \\$user of static method App\\\\Services\\\\Auth\\\\OtpService\\:\\:isExpired\\(\\) expects App\\\\Models\\\\Auth\\\\User, App\\\\Auth\\\\CanResetPassword given\\.$#"
+			count: 1
+			path: app/Auth/PasswordBroker.php
+
+		-
+			message: "#^Strict comparison using \\=\\=\\= between null and array will always evaluate to false\\.$#"
+			count: 1
+			path: app/Auth/PasswordBrokerManager.php
+
+		-
+			message: "#^Call to an undefined static method Illuminate\\\\Support\\\\Carbon\\:\\:jmktime\\(\\)\\.$#"
+			count: 2
+			path: app/Console/Commands/ImportOldData.php
+
+		-
+			message: "#^Parameter \\#1 \\$message of method Psr\\\\Log\\\\LoggerInterface\\:\\:info\\(\\) expects string\\|Stringable, int\\<0, max\\> given\\.$#"
+			count: 1
+			path: app/Console/Commands/ImportOldData.php
+
+		-
+			message: "#^Unsafe access to private property App\\\\DataTable\\\\InertiaTableExtended\\:\\:\\$defaultGlobalSearch through static\\:\\:\\.$#"
+			count: 3
+			path: app/DataTable/InertiaTableExtended.php
+
+		-
+			message: "#^Unsafe access to private property App\\\\DataTable\\\\InertiaTableExtended\\:\\:\\$defaultQueryBuilderConfig through static\\:\\:\\.$#"
+			count: 3
+			path: app/DataTable/InertiaTableExtended.php
+
+		-
+			message: "#^Call to an undefined method Symfony\\\\Component\\\\HttpFoundation\\\\Response\\:\\:status\\(\\)\\.$#"
+			count: 4
+			path: app/Exceptions/Handler.php
+
+		-
+			message: "#^Method App\\\\Exceptions\\\\Handler\\:\\:render\\(\\) should return Throwable but returns Illuminate\\\\Http\\\\RedirectResponse\\.$#"
+			count: 1
+			path: app/Exceptions/Handler.php
+
+		-
+			message: "#^Method App\\\\Exceptions\\\\Handler\\:\\:render\\(\\) should return Throwable but returns Symfony\\\\Component\\\\HttpFoundation\\\\Response\\.$#"
+			count: 2
+			path: app/Exceptions/Handler.php
+
+		-
+			message: "#^Cannot call method jdate\\(\\) on Illuminate\\\\Support\\\\Carbon\\|false\\.$#"
+			count: 1
+			path: app/Exports/Financial/PaymentExport.php
+
+		-
+			message: "#^Cannot call method jdate\\(\\) on Illuminate\\\\Support\\\\Carbon\\|false\\.$#"
+			count: 4
+			path: app/Exports/Reports/RouyeshExport.php
+
+		-
+			message: "#^Cannot call method jdate\\(\\) on Illuminate\\\\Support\\\\Carbon\\|false\\.$#"
+			count: 2
+			path: app/Exports/Reports/Shokolat/PaymentSheet.php
+
+		-
+			message: "#^Cannot call method jdate\\(\\) on Illuminate\\\\Support\\\\Carbon\\|false\\.$#"
+			count: 2
+			path: app/Exports/Students/EnrolmentExport.php
+
+		-
+			message: "#^Cannot call method jdate\\(\\) on Illuminate\\\\Support\\\\Carbon\\|false\\.$#"
+			count: 3
+			path: app/Exports/Students/PreRegistrationExport.php
+
+		-
+			message: "#^Cannot call method jdate\\(\\) on Illuminate\\\\Support\\\\Carbon\\|false\\.$#"
+			count: 1
+			path: app/Exports/Students/StudentExport.php
+
+		-
+			message: "#^Binary operation \"\\*\" between 365 and string results in an error\\.$#"
+			count: 1
+			path: app/Helpers/jdf.php
+
+		-
+			message: "#^Binary operation \"\\+\" between \\(float\\|int\\) and string results in an error\\.$#"
+			count: 2
+			path: app/Helpers/jdf.php
+
+		-
+			message: "#^Binary operation \"\\+\" between 12 and string results in an error\\.$#"
+			count: 1
+			path: app/Helpers/jdf.php
+
+		-
+			message: "#^Binary operation \"\\+\" between string and 1 results in an error\\.$#"
+			count: 11
+			path: app/Helpers/jdf.php
+
+		-
+			message: "#^Binary operation \"\\+\" between string and 12 results in an error\\.$#"
+			count: 1
+			path: app/Helpers/jdf.php
+
+		-
+			message: "#^Binary operation \"\\+\" between string and 2 results in an error\\.$#"
+			count: 1
+			path: app/Helpers/jdf.php
+
+		-
+			message: "#^Binary operation \"\\+\\=\" between string and 1595 results in an error\\.$#"
+			count: 1
+			path: app/Helpers/jdf.php
+
+		-
+			message: "#^Binary operation \"\\-\" between string and 1 results in an error\\.$#"
+			count: 1
+			path: app/Helpers/jdf.php
+
+		-
+			message: "#^Binary operation \"\\-\" between string and 10 results in an error\\.$#"
+			count: 1
+			path: app/Helpers/jdf.php
+
+		-
+			message: "#^Binary operation \"\\-\" between string and 5 results in an error\\.$#"
+			count: 1
+			path: app/Helpers/jdf.php
+
+		-
+			message: "#^Binary operation \"/\" between string and 6\\.5 results in an error\\.$#"
+			count: 1
+			path: app/Helpers/jdf.php
+
+		-
+			message: "#^Parameter \\#1 \\$hour of function mktime expects int, string given\\.$#"
+			count: 6
+			path: app/Helpers/jdf.php
+
+		-
+			message: "#^Parameter \\#1 \\$string of function mb_strlen expects string, int given\\.$#"
+			count: 1
+			path: app/Helpers/jdf.php
+
+		-
+			message: "#^Parameter \\#1 \\$string of function mb_substr expects string, int given\\.$#"
+			count: 3
+			path: app/Helpers/jdf.php
+
+		-
+			message: "#^Parameter \\#1 \\$string of function mb_substr expects string, int\\<100, max\\> given\\.$#"
+			count: 2
+			path: app/Helpers/jdf.php
+
+		-
+			message: "#^Parameter \\#1 \\$string of function str_pad expects string, \\(float\\|int\\) given\\.$#"
+			count: 1
+			path: app/Helpers/jdf.php
+
+		-
+			message: "#^Parameter \\#2 \\$minute of function mktime expects int\\|null, string given\\.$#"
+			count: 5
+			path: app/Helpers/jdf.php
+
+		-
+			message: "#^Parameter \\#3 \\$pad_string of function str_pad expects string, int given\\.$#"
+			count: 1
+			path: app/Helpers/jdf.php
+
+		-
+			message: "#^Parameter \\#3 \\$second of function mktime expects int\\|null, string given\\.$#"
+			count: 4
+			path: app/Helpers/jdf.php
+
+		-
+			message: "#^Result of && is always false\\.$#"
+			count: 1
+			path: app/Helpers/jdf.php
+
+		-
+			message: "#^Result of \\|\\| is always false\\.$#"
+			count: 1
+			path: app/Helpers/jdf.php
+
+		-
+			message: "#^Strict comparison using \\=\\=\\= between 0 and string will always evaluate to false\\.$#"
+			count: 2
+			path: app/Helpers/jdf.php
+
+		-
+			message: "#^Strict comparison using \\=\\=\\= between 1 and string will always evaluate to false\\.$#"
+			count: 1
+			path: app/Helpers/jdf.php
+
+		-
+			message: "#^Strict comparison using \\=\\=\\= between 12 and string will always evaluate to false\\.$#"
+			count: 1
+			path: app/Helpers/jdf.php
+
+		-
+			message: "#^Strict comparison using \\=\\=\\= between 6 and string will always evaluate to false\\.$#"
+			count: 8
+			path: app/Helpers/jdf.php
+
+		-
+			message: "#^PHPDoc tag @param for parameter \\$request with type Illuminate\\\\Http\\\\Request is not subtype of native type App\\\\Http\\\\Requests\\\\Auth\\\\PasswordResetLinkRequest\\.$#"
+			count: 1
+			path: app/Http/Controllers/Auth/PasswordResetLinkController.php
+
+		-
+			message: "#^PHPDoc tag @param for parameter \\$request with type Illuminate\\\\Http\\\\Request is not subtype of native type App\\\\Http\\\\Requests\\\\Auth\\\\PasswordResetVerifyRequest\\.$#"
+			count: 1
+			path: app/Http/Controllers/Auth/PasswordResetVerifyController.php
+
+		-
+			message: "#^Using nullsafe method call on non\\-nullable type Illuminate\\\\Http\\\\Request\\. Use \\-\\> instead\\.$#"
+			count: 1
+			path: app/Http/Controllers/Auth/PasswordResetVerifyController.php
+
+		-
+			message: "#^Call to an undefined method Illuminate\\\\Database\\\\Eloquent\\\\Builder\\<Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\:\\:defaultSorts\\(\\)\\.$#"
+			count: 1
+			path: app/Http/Controllers/Export/ExportCourseController.php
+
+		-
+			message: "#^Call to an undefined method Illuminate\\\\Database\\\\Eloquent\\\\Builder\\<Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\:\\:defaultSort\\(\\)\\.$#"
+			count: 2
+			path: app/Http/Controllers/Export/ExportCustomerClubController.php
+
+		-
+			message: "#^Call to private method jdate\\(\\) of parent class Carbon\\\\Carbon\\.$#"
+			count: 2
+			path: app/Http/Controllers/Export/ExportCustomerClubController.php
+
+		-
+			message: "#^Call to an undefined method Illuminate\\\\Database\\\\Eloquent\\\\Builder\\<Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\:\\:defaultSort\\(\\)\\.$#"
+			count: 1
+			path: app/Http/Controllers/Export/ExportEnrolmentController.php
+
+		-
+			message: "#^Call to an undefined method Illuminate\\\\Database\\\\Eloquent\\\\Builder\\<Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\:\\:defaultSort\\(\\)\\.$#"
+			count: 1
+			path: app/Http/Controllers/Export/ExportPaymentController.php
+
+		-
+			message: "#^Call to an undefined method Illuminate\\\\Database\\\\Eloquent\\\\Builder\\<Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\:\\:defaultSort\\(\\)\\.$#"
+			count: 1
+			path: app/Http/Controllers/Export/ExportPreRegistraionController.php
+
+		-
+			message: "#^Call to an undefined method Illuminate\\\\Database\\\\Eloquent\\\\Builder\\<Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\:\\:defaultSort\\(\\)\\.$#"
+			count: 1
+			path: app/Http/Controllers/Export/ExportRouyeshController.php
+
+		-
+			message: "#^Call to private method jdate\\(\\) of parent class Carbon\\\\Carbon\\.$#"
+			count: 1
+			path: app/Http/Controllers/Export/ExportRouyeshController.php
+
+		-
+			message: "#^Call to an undefined method Illuminate\\\\Database\\\\Eloquent\\\\Builder\\<Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\:\\:defaultSort\\(\\)\\.$#"
+			count: 1
+			path: app/Http/Controllers/Export/ExportStudentController.php
+
+		-
+			message: "#^Call to an undefined method Illuminate\\\\Database\\\\Eloquent\\\\Builder\\<Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\:\\:defaultSort\\(\\)\\.$#"
+			count: 1
+			path: app/Http/Controllers/Export/ExportTeacherController.php
+
+		-
+			message: "#^Call to an undefined method Illuminate\\\\Database\\\\Eloquent\\\\Builder\\<Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\:\\:defaultSort\\(\\)\\.$#"
+			count: 1
+			path: app/Http/Controllers/Financial/PaymentController.php
+
+		-
+			message: "#^Call to an undefined method Illuminate\\\\Database\\\\Eloquent\\\\Builder\\<Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\:\\:allowedIncludes\\(\\)\\.$#"
+			count: 1
+			path: app/Http/Controllers/Reports/PreRegistrationLogController.php
+
+		-
+			message: "#^Call to an undefined method Illuminate\\\\Database\\\\Eloquent\\\\Builder\\<Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\:\\:defaultSort\\(\\)\\.$#"
+			count: 1
+			path: app/Http/Controllers/Reports/RouyeshController.php
+
+		-
+			message: "#^Cannot call method jdate\\(\\) on Illuminate\\\\Support\\\\Carbon\\|false\\.$#"
+			count: 1
+			path: app/Http/Controllers/Reports/RouyeshController.php
+
+		-
+			message: "#^Call to an undefined method Illuminate\\\\Database\\\\Eloquent\\\\Builder\\<Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\:\\:allowedIncludes\\(\\)\\.$#"
+			count: 1
+			path: app/Http/Controllers/Reports/TransferLogController.php
+
+		-
+			message: "#^Access to an undefined property App\\\\Models\\\\Students\\\\Enrolment\\:\\:\\$status_label\\.$#"
+			count: 1
+			path: app/Http/Controllers/Students/EnrolmentController.php
+
+		-
+			message: "#^Call to an undefined method Illuminate\\\\Database\\\\Eloquent\\\\Builder\\<Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\:\\:defaultSort\\(\\)\\.$#"
+			count: 1
+			path: app/Http/Controllers/Students/EnrolmentController.php
+
+		-
+			message: "#^Cannot call method jdate\\(\\) on Illuminate\\\\Support\\\\Carbon\\|false\\.$#"
+			count: 1
+			path: app/Http/Controllers/Students/EnrolmentController.php
+
+		-
+			message: "#^Access to an undefined property Illuminate\\\\Support\\\\ValidatedInput\\:\\:\\$payed_at\\.$#"
+			count: 2
+			path: app/Http/Controllers/Students/OptOutController.php
+
+		-
+			message: "#^Call to an undefined method Illuminate\\\\Database\\\\Eloquent\\\\Builder\\:\\:allowedSorts\\(\\)\\.$#"
+			count: 1
+			path: app/Http/Controllers/Students/OptOutController.php
+
+		-
+			message: "#^If condition is always true\\.$#"
+			count: 1
+			path: app/Http/Controllers/Students/OptOutController.php
+
+		-
+			message: "#^Unreachable statement \\- code above always terminates\\.$#"
+			count: 1
+			path: app/Http/Controllers/Students/OptOutController.php
+
+		-
+			message: "#^Call to an undefined method Illuminate\\\\Database\\\\Eloquent\\\\Builder\\<Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\:\\:defaultSort\\(\\)\\.$#"
+			count: 1
+			path: app/Http/Controllers/Students/PreRegistrationController.php
+
+		-
+			message: "#^PHPDoc tag @param for parameter \\$request with type App\\\\Http\\\\Requests\\\\StorePreRegistrationRequest is not subtype of native type App\\\\Http\\\\Requests\\\\Students\\\\StorePreRegistrationRequest\\.$#"
+			count: 1
+			path: app/Http/Controllers/Students/PreRegistrationController.php
+
+		-
+			message: "#^Parameter \\$request of method App\\\\Http\\\\Controllers\\\\Students\\\\PreRegistrationController\\:\\:store\\(\\) has invalid type App\\\\Http\\\\Requests\\\\StorePreRegistrationRequest\\.$#"
+			count: 1
+			path: app/Http/Controllers/Students/PreRegistrationController.php
+
+		-
+			message: "#^Call to an undefined method Illuminate\\\\Database\\\\Eloquent\\\\Builder\\<Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\:\\:allowedFilters\\(\\)\\.$#"
+			count: 1
+			path: app/Http/Controllers/Students/StudentCoursesController.php
+
+		-
+			message: "#^Cannot call method jdate\\(\\) on Illuminate\\\\Support\\\\Carbon\\|false\\.$#"
+			count: 1
+			path: app/Http/Controllers/Students/StudentCoursesController.php
+
+		-
+			message: "#^Call to an undefined method Illuminate\\\\Database\\\\Eloquent\\\\Builder\\<Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\:\\:allowedFilters\\(\\)\\.$#"
+			count: 1
+			path: app/Http/Controllers/Students/StudentOldCoursesController.php
+
+		-
+			message: "#^Cannot call method jdate\\(\\) on Illuminate\\\\Support\\\\Carbon\\|false\\.$#"
+			count: 1
+			path: app/Http/Controllers/Students/StudentOldCoursesController.php
+
+		-
+			message: "#^Call to an undefined method Illuminate\\\\Database\\\\Eloquent\\\\Builder\\:\\:allowedFilters\\(\\)\\.$#"
+			count: 1
+			path: app/Http/Controllers/Students/StudentWeeklyScheduleController.php
+
+		-
+			message: "#^Method App\\\\Http\\\\Controllers\\\\Teachers\\\\TeacherController\\:\\:update\\(\\) should return Illuminate\\\\Http\\\\Response but returns Illuminate\\\\Http\\\\RedirectResponse\\.$#"
+			count: 1
+			path: app/Http/Controllers/Teachers/TeacherController.php
+
+		-
+			message: "#^Parameter \\#1 \\$callback of method Illuminate\\\\Support\\\\Collection\\<int,App\\\\Models\\\\Courses\\\\Department\\>\\:\\:transform\\(\\) expects callable\\(App\\\\Models\\\\Courses\\\\Department, int\\)\\: App\\\\Models\\\\Courses\\\\Department, Closure\\(mixed, mixed\\)\\: array\\{value\\: mixed, label\\: mixed\\} given\\.$#"
+			count: 1
+			path: app/Http/Controllers/Teachers/TeacherController.php
+
+		-
+			message: "#^Parameter \\#1 \\$callback of method Illuminate\\\\Support\\\\Collection\\<int,App\\\\Models\\\\Institute\\\\Branch\\>\\:\\:transform\\(\\) expects callable\\(App\\\\Models\\\\Institute\\\\Branch, int\\)\\: App\\\\Models\\\\Institute\\\\Branch, Closure\\(mixed, mixed\\)\\: array\\{value\\: mixed, label\\: mixed\\} given\\.$#"
+			count: 1
+			path: app/Http/Controllers/Teachers/TeacherController.php
+
+		-
+			message: "#^Property App\\\\Models\\\\Teachers\\\\Teacher\\:\\:\\$branches is not writable\\.$#"
+			count: 1
+			path: app/Http/Controllers/Teachers/TeacherController.php
+
+		-
+			message: "#^Property App\\\\Models\\\\Teachers\\\\Teacher\\:\\:\\$departments is not writable\\.$#"
+			count: 1
+			path: app/Http/Controllers/Teachers/TeacherController.php
+
+		-
+			message: "#^Cannot call method jdate\\(\\) on Illuminate\\\\Support\\\\Carbon\\|false\\.$#"
+			count: 1
+			path: app/Http/Controllers/Teachers/TeacherCoursesController.php
+
+		-
+			message: "#^Cannot call method jdate\\(\\) on Illuminate\\\\Support\\\\Carbon\\|false\\.$#"
+			count: 1
+			path: app/Http/Controllers/Teachers/TeacherOldCoursesController.php
+
+		-
+			message: "#^PHPDoc tag @param references unknown parameter\\: \\$id$#"
+			count: 1
+			path: app/Http/Controllers/Users/ProfileController.php
+
+		-
+			message: "#^Access to an undefined property Spatie\\\\Permission\\\\Models\\\\Role\\:\\:\\$allowoverride\\.$#"
+			count: 2
+			path: app/Http/Controllers/Users/RoleController.php
+
+		-
+			message: "#^Parameter \\#1 \\$callback of method Illuminate\\\\Support\\\\Collection\\<int,App\\\\Models\\\\Institute\\\\Branch\\>\\:\\:transform\\(\\) expects callable\\(App\\\\Models\\\\Institute\\\\Branch, int\\)\\: App\\\\Models\\\\Institute\\\\Branch, Closure\\(mixed, mixed\\)\\: array\\{value\\: mixed, label\\: mixed\\} given\\.$#"
+			count: 1
+			path: app/Http/Controllers/Users/UserContoller.php
+
+		-
+			message: "#^Call to an undefined static method Illuminate\\\\Support\\\\Facades\\\\Password\\:\\:validateOtp\\(\\)\\.$#"
+			count: 1
+			path: app/Http/Requests/Auth/PasswordResetVerifyRequest.php
+
+		-
+			message: "#^Access to an undefined property App\\\\Http\\\\Resources\\\\TeacherResource\\:\\:\\$bio\\.$#"
+			count: 1
+			path: app/Http/Resources/TeacherResource.php
+
+		-
+			message: "#^Access to an undefined property App\\\\Http\\\\Resources\\\\TeacherResource\\:\\:\\$cost\\.$#"
+			count: 1
+			path: app/Http/Resources/TeacherResource.php
+
+		-
+			message: "#^Access to an undefined property App\\\\Http\\\\Resources\\\\TeacherResource\\:\\:\\$first_name\\.$#"
+			count: 2
+			path: app/Http/Resources/TeacherResource.php
+
+		-
+			message: "#^Access to an undefined property App\\\\Http\\\\Resources\\\\TeacherResource\\:\\:\\$image\\.$#"
+			count: 1
+			path: app/Http/Resources/TeacherResource.php
+
+		-
+			message: "#^Access to an undefined property App\\\\Http\\\\Resources\\\\TeacherResource\\:\\:\\$last_name\\.$#"
+			count: 2
+			path: app/Http/Resources/TeacherResource.php
+
+		-
+			message: "#^Access to an undefined property App\\\\Http\\\\Resources\\\\UserResource\\:\\:\\$branches\\.$#"
+			count: 1
+			path: app/Http/Resources/UserResource.php
+
+		-
+			message: "#^Access to an undefined property App\\\\Http\\\\Resources\\\\UserResource\\:\\:\\$email\\.$#"
+			count: 1
+			path: app/Http/Resources/UserResource.php
+
+		-
+			message: "#^Access to an undefined property App\\\\Http\\\\Resources\\\\UserResource\\:\\:\\$first_name\\.$#"
+			count: 2
+			path: app/Http/Resources/UserResource.php
+
+		-
+			message: "#^Access to an undefined property App\\\\Http\\\\Resources\\\\UserResource\\:\\:\\$id\\.$#"
+			count: 1
+			path: app/Http/Resources/UserResource.php
+
+		-
+			message: "#^Access to an undefined property App\\\\Http\\\\Resources\\\\UserResource\\:\\:\\$last_name\\.$#"
+			count: 2
+			path: app/Http/Resources/UserResource.php
+
+		-
+			message: "#^Access to an undefined property App\\\\Http\\\\Resources\\\\UserResource\\:\\:\\$password\\.$#"
+			count: 1
+			path: app/Http/Resources/UserResource.php
+
+		-
+			message: "#^Access to an undefined property App\\\\Http\\\\Resources\\\\UserResource\\:\\:\\$phone\\.$#"
+			count: 1
+			path: app/Http/Resources/UserResource.php
+
+		-
+			message: "#^Access to an undefined property App\\\\Http\\\\Resources\\\\UserResource\\:\\:\\$roles\\.$#"
+			count: 1
+			path: app/Http/Resources/UserResource.php
+
+		-
+			message: "#^Access to an undefined property App\\\\Http\\\\Resources\\\\UserResource\\:\\:\\$username\\.$#"
+			count: 1
+			path: app/Http/Resources/UserResource.php
+
+		-
+			message: "#^Access to an undefined property App\\\\Http\\\\Resources\\\\UserResource\\:\\:\\$uuid\\.$#"
+			count: 1
+			path: app/Http/Resources/UserResource.php
+
+		-
+			message: "#^Call to an undefined method Monolog\\\\Handler\\\\HandlerInterface\\:\\:setFormatter\\(\\)\\.$#"
+			count: 1
+			path: app/Imports/Migration/CustomizeFormatter.php
+
+		-
+			message: "#^Access to an undefined property Illuminate\\\\Database\\\\Eloquent\\\\Model\\:\\:\\$branch\\.$#"
+			count: 2
+			path: app/Imports/Migration/OldCourseImport.php
+
+		-
+			message: "#^Access to an undefined property Illuminate\\\\Database\\\\Eloquent\\\\Model\\:\\:\\$code\\.$#"
+			count: 2
+			path: app/Imports/Migration/OldCourseImport.php
+
+		-
+			message: "#^Access to an undefined property Illuminate\\\\Database\\\\Eloquent\\\\Model\\:\\:\\$end_at\\.$#"
+			count: 1
+			path: app/Imports/Migration/OldCourseImport.php
+
+		-
+			message: "#^Access to an undefined property Illuminate\\\\Database\\\\Eloquent\\\\Model\\:\\:\\$id\\.$#"
+			count: 2
+			path: app/Imports/Migration/OldCourseImport.php
+
+		-
+			message: "#^Access to an undefined property Illuminate\\\\Database\\\\Eloquent\\\\Model\\:\\:\\$start_at\\.$#"
+			count: 1
+			path: app/Imports/Migration/OldCourseImport.php
+
+		-
+			message: "#^Method App\\\\Imports\\\\Migration\\\\OldEnrolImport\\:\\:convertDate\\(\\) never returns null so it can be removed from the return type\\.$#"
+			count: 1
+			path: app/Imports/Migration/OldEnrolImport.php
+
+		-
+			message: "#^Property App\\\\Imports\\\\Migration\\\\OldEnrolImport\\:\\:\\$contact_way is never read, only written\\.$#"
+			count: 1
+			path: app/Imports/Migration/OldEnrolImport.php
+
+		-
+			message: "#^Property App\\\\Imports\\\\Migration\\\\OldEnrolImport\\:\\:\\$intro_method is never read, only written\\.$#"
+			count: 1
+			path: app/Imports/Migration/OldEnrolImport.php
+
+		-
+			message: "#^Parameter \\#1 \\$string of function str_pad expects string, int given\\.$#"
+			count: 1
+			path: app/Imports/Migration/OldLessonGroupImport.php
+
+		-
+			message: "#^Parameter \\#1 \\$string of function str_pad expects string, int given\\.$#"
+			count: 1
+			path: app/Imports/Migration/OldLessonImport.php
+
+		-
+			message: "#^Method App\\\\Imports\\\\Migration\\\\OldPaymentImport\\:\\:convertDate\\(\\) never returns null so it can be removed from the return type\\.$#"
+			count: 1
+			path: app/Imports/Migration/OldPaymentImport.php
+
+		-
+			message: "#^Access to an undefined property Illuminate\\\\Database\\\\Eloquent\\\\Model\\:\\:\\$id\\.$#"
+			count: 1
+			path: app/Imports/Migration/OldPreRegistrationImport.php
+
+		-
+			message: "#^Access to an undefined property Illuminate\\\\Database\\\\Eloquent\\\\Model\\:\\:\\$lesson_id\\.$#"
+			count: 1
+			path: app/Imports/Migration/OldPreRegistrationImport.php
+
+		-
+			message: "#^Property App\\\\Imports\\\\Migration\\\\OldPreRegistrationImport\\:\\:\\$teachers is unused\\.$#"
+			count: 1
+			path: app/Imports/Migration/OldPreRegistrationImport.php
+
+		-
+			message: "#^Property App\\\\Imports\\\\Migration\\\\OldPreRegistrationImport\\:\\:\\$terms is never read, only written\\.$#"
+			count: 1
+			path: app/Imports/Migration/OldPreRegistrationImport.php
+
+		-
+			message: "#^Call to an undefined method Spatie\\\\Permission\\\\Contracts\\\\Role\\:\\:users\\(\\)\\.$#"
+			count: 2
+			path: app/Imports/Migration/OldStudentImport.php
+
+		-
+			message: "#^Call to an undefined method Spatie\\\\Permission\\\\Contracts\\\\Role\\:\\:users\\(\\)\\.$#"
+			count: 2
+			path: app/Imports/Migration/OldTeacherImport.php
+
+		-
+			message: "#^Method App\\\\Imports\\\\Migration\\\\OldTransactionImport\\:\\:convertDate\\(\\) never returns null so it can be removed from the return type\\.$#"
+			count: 1
+			path: app/Imports/Migration/OldTransactionImport.php
+
+		-
+			message: "#^Method App\\\\Imports\\\\Migration\\\\OldTransactionImport\\:\\:logToCSV\\(\\) is unused\\.$#"
+			count: 1
+			path: app/Imports/Migration/OldTransactionImport.php
+
+		-
+			message: "#^Parameter \\#1 \\$message of method Psr\\\\Log\\\\LoggerInterface\\:\\:info\\(\\) expects string\\|Stringable, int\\<0, max\\> given\\.$#"
+			count: 1
+			path: app/Imports/Migration/OldTransactionImport.php
+
+		-
+			message: "#^Property App\\\\Imports\\\\Migration\\\\OldTransactionImport\\:\\:\\$receipt_default is never read, only written\\.$#"
+			count: 1
+			path: app/Imports/Migration/OldTransactionImport.php
+
+		-
+			message: "#^Call to an undefined method Spatie\\\\Permission\\\\Contracts\\\\Role\\:\\:users\\(\\)\\.$#"
+			count: 2
+			path: app/Imports/StudentImport.php
+
+		-
+			message: "#^Call to an undefined method Spatie\\\\Permission\\\\Contracts\\\\Role\\:\\:users\\(\\)\\.$#"
+			count: 2
+			path: app/Imports/TeacherImport.php
+
+		-
+			message: "#^Access to an undefined property App\\\\Models\\\\Auth\\\\Otp\\:\\:\\$expire\\.$#"
+			count: 1
+			path: app/Models/Auth/Otp.php
+
+		-
+			message: "#^Call to an undefined method App\\\\Models\\\\Auth\\\\Otp\\:\\:blongsTo\\(\\)\\.$#"
+			count: 1
+			path: app/Models/Auth/Otp.php
+
+		-
+			message: "#^Call to an undefined method Illuminate\\\\Database\\\\Eloquent\\\\Builder\\:\\:withTrashed\\(\\)\\.$#"
+			count: 1
+			path: app/Models/Auth/User.php
+
+		-
+			message: "#^Call to an undefined method Illuminate\\\\Database\\\\Eloquent\\\\Builder\\:\\:withTrashed\\(\\)\\.$#"
+			count: 1
+			path: app/Models/Courses/Course.php
+
+		-
+			message: "#^Access to an undefined property App\\\\Models\\\\Courses\\\\Department\\:\\:\\$deleted_at\\.$#"
+			count: 1
+			path: app/Models/Courses/Department.php
+
+		-
+			message: "#^Call to an undefined method Illuminate\\\\Database\\\\Eloquent\\\\Builder\\:\\:withTrashed\\(\\)\\.$#"
+			count: 1
+			path: app/Models/Courses/Department.php
+
+		-
+			message: "#^Access to an undefined property App\\\\Models\\\\Courses\\\\GradeType\\:\\:\\$deleted_at\\.$#"
+			count: 1
+			path: app/Models/Courses/GradeType.php
+
+		-
+			message: "#^Call to an undefined method Illuminate\\\\Database\\\\Eloquent\\\\Builder\\:\\:withTrashed\\(\\)\\.$#"
+			count: 1
+			path: app/Models/Courses/GradeType.php
+
+		-
+			message: "#^Access to an undefined property App\\\\Models\\\\Courses\\\\Lesson\\:\\:\\$deleted_at\\.$#"
+			count: 1
+			path: app/Models/Courses/Lesson.php
+
+		-
+			message: "#^Call to an undefined method Illuminate\\\\Database\\\\Eloquent\\\\Builder\\:\\:withTrashed\\(\\)\\.$#"
+			count: 1
+			path: app/Models/Courses/Lesson.php
+
+		-
+			message: "#^Access to an undefined property App\\\\Models\\\\Courses\\\\LessonGroup\\:\\:\\$deleted_at\\.$#"
+			count: 1
+			path: app/Models/Courses/LessonGroup.php
+
+		-
+			message: "#^Call to an undefined method Illuminate\\\\Database\\\\Eloquent\\\\Builder\\:\\:withTrashed\\(\\)\\.$#"
+			count: 1
+			path: app/Models/Courses/LessonGroup.php
+
+		-
+			message: "#^Access to an undefined property App\\\\Models\\\\Financial\\\\BankAccount\\:\\:\\$deleted_at\\.$#"
+			count: 1
+			path: app/Models/Financial/BankAccount.php
+
+		-
+			message: "#^Call to an undefined method Illuminate\\\\Database\\\\Eloquent\\\\Builder\\:\\:withTrashed\\(\\)\\.$#"
+			count: 1
+			path: app/Models/Financial/BankAccount.php
+
+		-
+			message: "#^Access to an undefined property App\\\\Models\\\\Financial\\\\DiscountGroup\\:\\:\\$deleted_at\\.$#"
+			count: 1
+			path: app/Models/Financial/DiscountGroup.php
+
+		-
+			message: "#^Call to an undefined method Illuminate\\\\Database\\\\Eloquent\\\\Builder\\:\\:withTrashed\\(\\)\\.$#"
+			count: 1
+			path: app/Models/Financial/DiscountGroup.php
+
+		-
+			message: "#^PHPDoc tag @property has invalid value \\(\\$payway_type_label\\)\\: Unexpected token \"\\$payway_type_label\", expected type at offset 56$#"
+			count: 1
+			path: app/Models/Financial/Transaction.php
+
+		-
+			message: "#^Access to an undefined property App\\\\Models\\\\Institute\\\\Branch\\:\\:\\$deleted_at\\.$#"
+			count: 1
+			path: app/Models/Institute/Branch.php
+
+		-
+			message: "#^Call to an undefined method Illuminate\\\\Database\\\\Eloquent\\\\Builder\\:\\:withTrashed\\(\\)\\.$#"
+			count: 1
+			path: app/Models/Institute/Branch.php
+
+		-
+			message: "#^Access to an undefined property App\\\\Models\\\\Institute\\\\Classroom\\:\\:\\$deleted_at\\.$#"
+			count: 1
+			path: app/Models/Institute/Classroom.php
+
+		-
+			message: "#^Call to an undefined method App\\\\Enums\\\\ClassTypeEnum\\:\\:icon\\(\\)\\.$#"
+			count: 1
+			path: app/Models/Institute/Classroom.php
+
+		-
+			message: "#^Call to an undefined method Illuminate\\\\Database\\\\Eloquent\\\\Builder\\:\\:withTrashed\\(\\)\\.$#"
+			count: 1
+			path: app/Models/Institute/Classroom.php
+
+		-
+			message: "#^Using nullsafe method call on non\\-nullable type App\\\\Enums\\\\ClassTypeEnum\\. Use \\-\\> instead\\.$#"
+			count: 1
+			path: app/Models/Institute/Classroom.php
+
+		-
+			message: "#^Access to an undefined property App\\\\Models\\\\Institute\\\\Term\\:\\:\\$deleted_at\\.$#"
+			count: 1
+			path: app/Models/Institute/Term.php
+
+		-
+			message: "#^Call to an undefined method Illuminate\\\\Database\\\\Eloquent\\\\Builder\\:\\:withTrashed\\(\\)\\.$#"
+			count: 1
+			path: app/Models/Institute/Term.php
+
+		-
+			message: "#^Access to an undefined property App\\\\Models\\\\Settings\\\\ContactMethod\\:\\:\\$deleted_at\\.$#"
+			count: 1
+			path: app/Models/Settings/ContactMethod.php
+
+		-
+			message: "#^Call to an undefined method Illuminate\\\\Database\\\\Eloquent\\\\Builder\\:\\:withTrashed\\(\\)\\.$#"
+			count: 1
+			path: app/Models/Settings/ContactMethod.php
+
+		-
+			message: "#^Access to an undefined property App\\\\Models\\\\Settings\\\\IntroductionMethod\\:\\:\\$deleted_at\\.$#"
+			count: 1
+			path: app/Models/Settings/IntroductionMethod.php
+
+		-
+			message: "#^Call to an undefined method Illuminate\\\\Database\\\\Eloquent\\\\Builder\\:\\:withTrashed\\(\\)\\.$#"
+			count: 1
+			path: app/Models/Settings/IntroductionMethod.php
+
+		-
+			message: "#^Access to an undefined property App\\\\Models\\\\Settings\\\\Zone\\:\\:\\$deleted_at\\.$#"
+			count: 1
+			path: app/Models/Settings/Zone.php
+
+		-
+			message: "#^Call to an undefined method Illuminate\\\\Database\\\\Eloquent\\\\Builder\\:\\:withTrashed\\(\\)\\.$#"
+			count: 1
+			path: app/Models/Settings/Zone.php
+
+		-
+			message: "#^Call to an undefined method Illuminate\\\\Database\\\\Eloquent\\\\Builder\\:\\:withTrashed\\(\\)\\.$#"
+			count: 1
+			path: app/Models/Students/Enrolment.php
+
+		-
+			message: "#^Access to an undefined property App\\\\Models\\\\Students\\\\OptOut\\:\\:\\$deleted_at\\.$#"
+			count: 1
+			path: app/Models/Students/OptOut.php
+
+		-
+			message: "#^Call to an undefined method Illuminate\\\\Database\\\\Eloquent\\\\Builder\\:\\:withTrashed\\(\\)\\.$#"
+			count: 1
+			path: app/Models/Students/OptOut.php
+
+		-
+			message: "#^Access to an undefined property App\\\\Models\\\\Students\\\\PreRegistration\\:\\:\\$deleted_at\\.$#"
+			count: 1
+			path: app/Models/Students/PreRegistration.php
+
+		-
+			message: "#^Call to an undefined method Illuminate\\\\Database\\\\Eloquent\\\\Builder\\:\\:withTrashed\\(\\)\\.$#"
+			count: 1
+			path: app/Models/Students/PreRegistration.php
+
+		-
+			message: "#^Call to an undefined method Illuminate\\\\Database\\\\Eloquent\\\\Builder\\:\\:withTrashed\\(\\)\\.$#"
+			count: 1
+			path: app/Models/Students/Student.php
+
+		-
+			message: "#^Call to an undefined method Illuminate\\\\Database\\\\Eloquent\\\\Builder\\:\\:withTrashed\\(\\)\\.$#"
+			count: 1
+			path: app/Models/Teachers/Teacher.php
+
+		-
+			message: "#^Access to an undefined property App\\\\Notifications\\\\Auth\\\\ResetPasswordNotification\\:\\:\\$token\\.$#"
+			count: 2
+			path: app/Notifications/Auth/ResetPasswordNotification.php
+
+		-
+			message: "#^PHPDoc tag @param references unknown parameter\\: \\$url$#"
+			count: 1
+			path: app/Notifications/Auth/ResetPasswordNotification.php
+
+		-
+			message: "#^Call to an undefined static method App\\\\Providers\\\\AppServiceProvider\\:\\:createFromTimestamp\\(\\)\\.$#"
+			count: 2
+			path: app/Providers/AppServiceProvider.php
+
+		-
+			message: "#^Call to an undefined static method App\\\\Providers\\\\AppServiceProvider\\:\\:this\\(\\)\\.$#"
+			count: 2
+			path: app/Providers/AppServiceProvider.php
+
+		-
+			message: "#^Access to an undefined property object\\:\\:\\$level\\.$#"
+			count: 1
+			path: app/Providers/CustomSlackServiceProvider.php
+
+		-
+			message: "#^Caught class App\\\\Providers\\\\Exception not found\\.$#"
+			count: 1
+			path: app/Providers/CustomSlackServiceProvider.php
+
+		-
+			message: "#^Parameter \\#2 \\$limit of static method Illuminate\\\\Support\\\\Str\\:\\:limit\\(\\) expects int, string given\\.$#"
+			count: 1
+			path: app/Providers/CustomSlackServiceProvider.php
+
+		-
+			message: "#^Property App\\\\Providers\\\\CustomSlackServiceProvider\\:\\:\\$path is unused\\.$#"
+			count: 1
+			path: app/Providers/CustomSlackServiceProvider.php
+
+		-
+			message: "#^Parameter \\#1 \\$response of method App\\\\DataTable\\\\InertiaTableExtended\\:\\:applyTo\\(\\) expects Inertia\\\\Response, \\$this\\(App\\\\Providers\\\\InertiaTableServiceProvider\\) given\\.$#"
+			count: 1
+			path: app/Providers/InertiaTableServiceProvider.php
+
+		-
+			message: "#^Access to an undefined property App\\\\Models\\\\Financial\\\\Transaction\\:\\:\\$payway_type_label\\.$#"
+			count: 2
+			path: app/Services/DashboardService.php
+
+		-
+			message: "#^Access to an undefined property App\\\\Models\\\\Financial\\\\Transaction\\:\\:\\$student\\.$#"
+			count: 1
+			path: app/Services/DashboardService.php
+
+		-
+			message: "#^Call to private method jdate\\(\\) of parent class Carbon\\\\Carbon\\.$#"
+			count: 1
+			path: app/Services/DashboardService.php
+
+		-
+			message: "#^Call to an undefined method Illuminate\\\\Database\\\\Schema\\\\ForeignKeyDefinition\\:\\:constrained\\(\\)\\.$#"
+			count: 1
+			path: database/migrations/2022_10_21_112856_create_enrolments_table.php
+
+		-
+			message: "#^Call to an undefined method Illuminate\\\\Database\\\\Schema\\\\ForeignKeyDefinition\\:\\:constrained\\(\\)\\.$#"
+			count: 2
+			path: database/migrations/2022_10_31_174648_create_transfer_logs_table.php
+
+		-
+			message: "#^Call to an undefined method Illuminate\\\\Database\\\\Schema\\\\ForeignKeyDefinition\\:\\:constrained\\(\\)\\.$#"
+			count: 1
+			path: database/migrations/2022_11_06_121633_create_pre_registrations_table.php
+
+		-
+			message: "#^Call to an undefined method Illuminate\\\\Database\\\\Schema\\\\ForeignKeyDefinition\\:\\:after\\(\\)\\.$#"
+			count: 1
+			path: database/migrations/2022_12_22_172305_add_zone_to_students.php
+
+		-
+			message: "#^Parameter \\#1 \\$amount of class App\\\\DTO\\\\DiscountDTO constructor expects int, string given\\.$#"
+			count: 1
+			path: database/seeders/Demo/Financial/PaymentSeeder.php
+
+		-
+			message: "#^Undefined variable\\: \\$this$#"
+			count: 1
+			path: routes/console.php

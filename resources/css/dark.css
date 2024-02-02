@@ -1,0 +1,31 @@
+.multiselect-search,.multiselect {
+    @apply dark:bg-slate-800 dark:text-gray-100 dark:border-slate-700;
+}
+
+.multiselect-options .multiselect-placeholder,
+.multiselect-dropdown .multiselect-no-options{
+    @apply dark:bg-slate-800 dark:text-gray-300;
+}
+.multiselect-options .multiselect-option {
+    @apply dark:bg-slate-800 dark:text-gray-100 dark:hover:bg-slate-700;
+}
+
+.multiselect-options .multiselect-option[data-pointed="true"] {
+@apply dark:text-gray-100 dark:bg-slate-700;
+}
+.multiselect-options .multiselect-option[data-selected="true"] {
+    @apply dark:text-gray-100 dark:bg-green-600;
+}
+.multiselect-options .multiselect-no-options{
+    @apply dark:bg-slate-800 dark:text-gray-100 dark:hover:bg-slate-700;
+}
+
+.datapicker-wrapper .vpd-input-group input{
+    @apply dark:bg-slate-800 dark:text-gray-100 dark:border-slate-700;
+}
+.vpd-wrapper .vpd-content{
+    @apply dark:bg-slate-800;
+}
+.multiselect.is-disabled{
+    @apply dark:bg-slate-800 cursor-not-allowed;
+}
