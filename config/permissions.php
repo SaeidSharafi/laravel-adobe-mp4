@@ -12,8 +12,7 @@ return [
         ],
     ],
 
-
-    'users' => [
+    'users'    => [
         [
             'key'         => 'user',
             'title'       => 'auth.permission.user',
@@ -30,8 +29,16 @@ return [
             'permissions' => []
         ],
     ],
-
-    'reports' => [
+    'settings' => [
+        [
+            'key'         => 'adobe-server',
+            'title'       => 'auth.permission.setting.adobe-server',
+            'hasOwn'      => false,
+            'viewOnly'    => false,
+            'permissions' => []
+        ]
+    ],
+    'reports'  => [
         [
             'key'         => 'report',
             'title'       => 'auth.permission.report',

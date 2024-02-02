@@ -3,6 +3,7 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
+use Illuminate\Support\Str;
 use Spatie\Permission\Models\Permission;
 use Spatie\Permission\PermissionRegistrar;
 
@@ -69,6 +70,17 @@ class UpdatePermissions extends Command
             }
 
             Permission::insertOrIgnore($formated_permissions);
+
+            // Generate PermissionKeys class
+            $permissionKeysCode = "<?php\nnamespace App\\Helpers;\nclass PermissionKeys\n{\n";
+            foreach ($formated_permissions as $permission) {
+                $permissionKey = $permission['name'];
+                $permissionVar = Str::upper(preg_replace('/[^a-zA-Z0-9_]/', '_', $permissionKey));
+                $permissionKeysCode .= "    public const {$permissionVar} = '{$permissionKey}';\n";
+            }
+            $permissionKeysCode .= "}\n";
+
+            file_put_contents(app_path('Helpers/PermissionKeys.php'), $permissionKeysCode);
         }
     }
 }
