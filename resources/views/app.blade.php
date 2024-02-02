@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title inertia>{{ config('app.name', 'Laravel Easy Dash') }}</title>
+        <title inertia>{{ config('app.name', 'Laravel Adobe MP4') }}</title>
         <link rel="icon" type="image/x-icon" href="{{Vite::asset('resources/images/laravel.svg')}}">
         <!-- Scripts -->
         @routes

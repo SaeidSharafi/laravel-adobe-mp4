@@ -14,7 +14,7 @@ class NotificationTestCommand extends Command
 
     public function handle(): void
     {
-        $user = User::query()->where('email', 'admin@easy.ir')->first();
+        $user = User::query()->where('email', 'admin@lamp4.loclhost')->first();
         $user->notify(new SimpleDBNotification(['title' => 'test','description' => 'test description']));
     }
 }

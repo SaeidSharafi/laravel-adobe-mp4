@@ -193,7 +193,7 @@ return [
              */
             'channel' => null,
 
-            'username' => env('LOG_SLACK_USERNAME', 'easy-dash'),
+            'username' => env('LOG_SLACK_USERNAME', 'laravel-adobe-mp4'),
 
             'icon' => null,
 

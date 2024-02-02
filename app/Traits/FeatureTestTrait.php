@@ -46,7 +46,7 @@ trait FeatureTestTrait
     public function admin_user()
     {
         $this->user = User::forceCreate(
-            User::factory()->make(['email' => 'admin@easy.localhost', 'is_admin' => true])->toArray()
+            User::factory()->make(['email' => 'admin@lamp4.localhost', 'is_admin' => true])->toArray()
         );
 
         return $this->actingAs($this->user->fresh());

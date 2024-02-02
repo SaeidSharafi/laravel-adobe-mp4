@@ -3,7 +3,7 @@
     <div class="w-1/2 block">
     <LogoSymbol></LogoSymbol>
     </div>
-      <h1>Easy Dash</h1>
+      <h1>Adobe MP4</h1>
     </div>
 </template>
 

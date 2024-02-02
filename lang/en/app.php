@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'title'   => 'Laravel Easy Dash',
+    'title'   => 'Laravel Adobe MP4',
     'version' => 'Version :version',
     'home'    => 'Home',
     'nav'     => [

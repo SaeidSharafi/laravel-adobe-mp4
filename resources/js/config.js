@@ -1,6 +1,6 @@
 /*Default Settings*/
 const appConf = {
-    appName: 'Laravel Easy Dash',
+    appName: 'Laravel Adobe MP4',
     catchPhrase: 'Peace at Home, Peace in the World',
     logo: {
       dark: '/img/dark-logo.svg',
@@ -108,7 +108,7 @@ const footerConf = {
         "              href=\"https://tailadmin.dev/\"\n" +
         "              target=\"_blank\"\n" +
         "            >\n" +
-        "              Laravel Easy Dash v0.01\n" +
+        "              Laravel Adobe MP4 v0.01\n" +
         "              </a>\n" +
         "            <span>by</span>\n" +
         "            <a\n" +

@@ -22,7 +22,7 @@ import AuthenticatedLayout from "@/Layouts/Authenticated.vue";
 import {modal} from "momentum-modal";
 
 
-const appName = window.document.getElementsByTagName('title')[0]?.innerText || 'Laravel Easy Dash';
+const appName = window.document.getElementsByTagName('title')[0]?.innerText || 'Laravel Adobe MP4';
 
 const pinia = createPinia();
 

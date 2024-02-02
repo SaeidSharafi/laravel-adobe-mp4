@@ -19,7 +19,7 @@ class UserSeeder extends Seeder
             'first_name' => 'admin',
             'last_name'  => '',
             'phone'      => '09111111111',
-            'email'      => 'admin@easy.ir',
+            'email'      => 'admin@lamp4.localhost',
             'password'   => Hash::make("123456"),
             'is_admin'   => true
         ]);
@@ -28,7 +28,7 @@ class UserSeeder extends Seeder
             'first_name' => 'manager',
             'last_name'  => '',
             'phone'      => '09222222222',
-            'email'      => 'manager@easy.ir',
+            'email'      => 'manager@lamp4.localhost',
             'password'   => Hash::make("123456"),
         ]);
         $user->assignRole('manager');
