@@ -53,7 +53,7 @@ class ActivityLogController extends Controller
             ->with('causer', 'subject')
             ->paginate(request('perPage', 15))
             ->through(function ($log) {
-                $log->created_at_s  = $log->created_at->jdate();
+                $log->created_at_s  = $log->created_at->verta()->format('Y-m-d');
                 $log->subject_label = ActivityLogSubjectEnum::from($log->subject_type)->translate();
                 return $log;
             })
