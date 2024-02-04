@@ -7,26 +7,26 @@ use App\Helpers\PermissionKeys;
 uses(App\Traits\FeatureTestTrait::class);
 
 it('can view adobe server setting with permission', function () {
-    $response = $this->unauthorized_user()
-        ->get('/setting/adobe-server');
+    $response = $this->authorized_user([PermissionKeys::SETTINGS_ADOBE_SERVER_VIEW])
+        ->get('/settings/adobe-server');
 
     $response->assertOk();
 
 });
 
 it('can\'t view adobe server setting without permission', function () {
-    $response = $this->authorized_user([PermissionKeys::SETTINGS_ADOBE_SERVER_VIEW])
-        ->get('/setting/adobe-server');
+    $response = $this->unauthorized_user()
+        ->get('/settings/adobe-server');
 
     $response->assertForbidden();
 });
 
 it('can store adobe server setting with permission', function () {
-    $this->authorized_user([PermissionKeys::SETTINGS_ADOBE_SERVER_CREATE])
-        ->post('/setting/adobe-server',
+    $this->authorized_user([PermissionKeys::SETTINGS_ADOBE_SERVER_UPDATE])
+        ->post('/settings/adobe-server',
             [
-                'server_address' => '0.0.0.0',
-                'user_name'      => 'user',
+                'server_address' => 'http://0.0.0.0',
+                'username'      => 'user',
                 'password'       => 'pass'
             ]
         );
@@ -34,59 +34,92 @@ it('can store adobe server setting with permission', function () {
     $this->assertDatabaseHas(
         'settings',
         [
-            'adobe_server.server_address' => '0.0.0.0',
-            'adobe_server.user_name'      => 'user',
-            'adobe_server.password'       => 'pass',
+            'component' => 'adobe_server',
+            'key' => 'server_address',
+            'value' => 'http://0.0.0.0',
+        ]
+    );
+    $this->assertDatabaseHas(
+        'settings',
+        [
+            'component' => 'adobe_server',
+            'key' => 'username',
+            'value'      => 'user',
+        ]
+    );
+    $this->assertDatabaseHas(
+        'settings',
+        [
+            'component' => 'adobe_server',
+            'key' => 'password',
+            'value'       => 'pass',
         ]
     );
 
 });
 
 it('can\'t store adobe server setting without permission', function () {
-    $this->unauthorized_user()
-        ->post('/setting/adobe-server',
+    $response = $this->unauthorized_user()
+        ->post('/settings/adobe-server',
             [
-                'server_address' => '0.0.0.0',
-                'user_name'      => 'user1',
+                'server_address' => 'http://0.0.0.0',
+                'username'      => 'user1',
                 'password'       => 'pass1'
             ]
         );
+    $response->assertForbidden();
 
     $this->assertDatabaseMissing(
         'settings',
         [
-            'adobe_server.server_address' => '0.0.0.0',
-            'adobe_server.user_name'      => 'user1',
-            'adobe_server.password'       => 'pass1',
+            'component' => 'adobe_server',
+            'key' => 'server_address',
+            'value' => 'http://0.0.0.0',
+        ]
+    );
+    $this->assertDatabaseMissing(
+        'settings',
+        [
+            'component' => 'adobe_server',
+            'key' => 'username',
+            'value'      => 'user1',
+        ]
+    );
+    $this->assertDatabaseMissing(
+        'settings',
+        [
+            'component' => 'adobe_server',
+            'key' => 'password',
+            'value'       => 'pass1',
         ]
     );
 
 });
 
-it('prevent storing invalid request data', function (string $address,string $username,string $pass,) {
-    $reponse = $this->authorized_user([PermissionKeys::SETTINGS_ADOBE_SERVER_CREATE])
-        ->post('/setting/adobe-server',
+it('prevent storing invalid request data', function (?string $address,?string $username,?string $pass) {
+    $reponse = $this->authorized_user([PermissionKeys::SETTINGS_ADOBE_SERVER_UPDATE])
+        ->post('/settings/adobe-server',
             [
                 'server_address' => $address,
-                'user_name'      => $username,
+                'username'      => $username,
                 'password'       => $pass
             ]
         );
 
     $reponse->assertInvalid();
 
-})->with(
-    ['0.0.0.0',null,null],
+})->with([
+    ['http://0.0.0.0',null,null],
     [null,'user','pass'],
-    ['0.0.0.0',null,'pass'],
-);
+    ['http://0.0.0.0',null,'pass'],
+]);
 
 it('validate request data', function (string $address,string $username,string $pass,) {
-    $reponse = $this->authorized_user([PermissionKeys::SETTINGS_ADOBE_SERVER_CREATE])
-        ->post('/setting/adobe-server',
+    $reponse = $this->authorized_user([PermissionKeys::SETTINGS_ADOBE_SERVER_UPDATE])
+        ->post('/settings/adobe-server',
             [
                 'server_address' => $address,
-                'user_name'      => $username,
+                'username'      => $username,
                 'password'       => $pass
             ]
         );
@@ -94,7 +127,7 @@ it('validate request data', function (string $address,string $username,string $p
     $reponse->assertValid();
 
 })->with(
-    ['0.0.0.0','user','pass'],
-    ['adobe.server.com','user@meial.com','pass2A#%s'],
-    ['192.168.0.1/api','user','passsas'],
+    [['http://0.0.0.0','user','pass'],
+    ['http://adobe.server.com','user@meial.com','pass2A#%s'],
+    ['http://192.168.0.1/api','user','passsas'],]
 );

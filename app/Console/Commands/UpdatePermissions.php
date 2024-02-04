@@ -20,7 +20,7 @@ class UpdatePermissions extends Command
             app()[PermissionRegistrar::class]->forgetCachedPermissions();
 
             $permissions = config('permissions');
-            $defaults    = [
+            $defaults = [
                 'view',
                 'create',
                 'update',
@@ -44,11 +44,13 @@ class UpdatePermissions extends Command
                         continue;
                     }
                     foreach ($defaults as $item) {
-                        $formated_permissions[] = [
-                            'name'       => "{$section}.{$permission['key']}.{$item}",
-                            'guard_name' => 'web',
-                            'created_at' => now()
-                        ];
+                        if (!data_get($permission, 'only') || in_array($item, $permission['only'])) {
+                            $formated_permissions[] = [
+                                'name'       => "{$section}.{$permission['key']}.{$item}",
+                                'guard_name' => 'web',
+                                'created_at' => now()
+                            ];
+                        }
                     }
                     if ($permission['hasOwn']) {
                         foreach ($defaults_own as $item) {

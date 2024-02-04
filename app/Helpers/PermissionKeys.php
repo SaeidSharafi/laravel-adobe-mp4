@@ -15,9 +15,7 @@ class PermissionKeys
     public const USERS_ROLE_UPDATE = 'users.role.update';
     public const USERS_ROLE_DELETE = 'users.role.delete';
     public const SETTINGS_ADOBE_SERVER_VIEW = 'settings.adobe-server.view';
-    public const SETTINGS_ADOBE_SERVER_CREATE = 'settings.adobe-server.create';
     public const SETTINGS_ADOBE_SERVER_UPDATE = 'settings.adobe-server.update';
-    public const SETTINGS_ADOBE_SERVER_DELETE = 'settings.adobe-server.delete';
     public const REPORTS_REPORT_VIEW = 'reports.report.view';
     public const REPORTS_REPORT_CREATE = 'reports.report.create';
     public const REPORTS_REPORT_UPDATE = 'reports.report.update';

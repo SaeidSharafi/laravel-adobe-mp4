@@ -33,8 +33,8 @@ const alertConfig = reactive({
     icon: "check-circle",
     title: "filledTitle",
 });
-const icon = computed(() =>{
-  switch ($page.props.flash.status.icon) {
+const computedIcon = computed(() =>{
+  switch (usePage().props.flash.status?.icon) {
     case "icon_deleted":
       return  mdiTrashCan;
     case "icon_failed":
@@ -42,10 +42,10 @@ const icon = computed(() =>{
     case "icon_success":
       return mdiCheckCircle;
     case "icon_info":
-    default:
       return mdiInformation;
 
   }
+    return mdiInformation;
 })
 
 router.on('finish', () => {
@@ -96,7 +96,7 @@ const menuClick = (event, item) => {
         <div
             :class="{
       dark: styleStore.darkMode,
-      'overflow-hidden lg:overflow-visible': layoutStore.isAsideMobileExpanded,
+      'overflow-hidden lg:overflow-visible': layoutStore.isAsideMobileExpanded
     }"
         >
             <div
@@ -145,8 +145,7 @@ const menuClick = (event, item) => {
                 <AsideMenu :menu="asideMenuComputed" @menu-click="menuClick"/>
 
                 <main :class="mainClass">
-
-                    <div v-if="$page.props.flash.status">
+                    <div v-if="usePage().props.flash.status">
                         <Alert
                             :key="alert_key"
                             :design="alertConfig.design"
@@ -155,7 +154,7 @@ const menuClick = (event, item) => {
                             :closeable="true"
                         >
                             <template #icon>
-                                <BaseIcon :path="$page.props.flash.status.icon" size="lg" h="12" w="12"/>
+                                <BaseIcon :path="computedIcon" size="24" h="12" w="12"/>
                             </template>
                             {{ $page.props.flash.status.msg }}
                         </Alert>

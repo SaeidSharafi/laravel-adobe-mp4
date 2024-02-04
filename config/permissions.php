@@ -35,6 +35,7 @@ return [
             'title'       => 'auth.permission.setting.adobe-server',
             'hasOwn'      => false,
             'viewOnly'    => false,
+            'only'        => ['view', 'update'],
             'permissions' => []
         ]
     ],
@@ -44,6 +45,7 @@ return [
             'title'       => 'auth.permission.report',
             'hasOwn'      => false,
             'viewOnly'    => false,
+            'only' => [],
             'permissions' => []
         ],
         [

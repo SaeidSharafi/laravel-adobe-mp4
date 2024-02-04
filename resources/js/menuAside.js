@@ -12,7 +12,19 @@ export default {
             label: "app.nav.side.dashboard",
             permissions: 'dashboard.admin.view',
         },
-
+        {
+            label: "app.nav.side.settings.parent",
+            icon: mdiDatabase,
+            permissions: ['settings.adobe-server.update'],
+            menu: [
+                {
+                    route: "settings.adobe-server.edit",
+                    label: "app.nav.side.settings.adobe-server",
+                    icon: mdiScriptTextOutline,
+                    permissions: 'settings.adobe-server.update',
+                },
+            ],
+        },
         {
             label: "app.nav.side.reports.parent",
             icon: mdiDatabase,
