@@ -29,6 +29,15 @@ return [
             'permissions' => []
         ],
     ],
+    'adobe-connect' => [
+        [
+            'key'         => 'recording',
+            'title'       => 'auth.permission.adobe-connect.recording',
+            'hasOwn'      => false,
+            'viewOnly'    => false,
+            'permissions' => []
+        ]
+    ],
     'settings' => [
         [
             'key'         => 'adobe-server',

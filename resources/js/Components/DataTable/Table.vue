@@ -195,6 +195,9 @@
                                                           :checked="isChecked(item[column.key])"
                                                           @update:checked="updateCheckedItems($event,item[column.key])"/>
                                             </label>
+                                            <a :href="get(item, column.key)" class="w-full text-green-600"  v-if="column.isUrl" target="_blank">
+                                                {{ column.translation }}
+                                            </a>
                                             <span class="w-full" :class="column.key === 'note' ? ' line-clamp-2 ellipsis' : ''" v-else>
                                                 {{ get(item, column.key) }}
                                             </span>

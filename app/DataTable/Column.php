@@ -14,6 +14,7 @@ class Column implements Arrayable
         public bool $hidden,
         public bool $sortable,
         public bool $selectable,
+        public bool $isUrl,
         public bool|string $sorted
     ) {
     }
@@ -28,6 +29,7 @@ class Column implements Arrayable
             'hidden'        => $this->hidden,
             'sortable'      => $this->sortable,
             'selectable'    => $this->selectable,
+            'isUrl'         => $this->isUrl,
             'sorted'        => $this->sorted,
         ];
     }

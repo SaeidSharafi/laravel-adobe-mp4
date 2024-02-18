@@ -4,7 +4,7 @@ import BaseButton from '@/Components/Form/BaseButton.vue';
 import FormField from '@/Components/Form/FormField.vue';
 import FormControl from '@/Components/Form/FormControl.vue';
 import ValidationErrors from "@/Components/Form/ValidationErrors.vue";
-import {mdiAccountEdit, mdiBackspace} from "@mdi/js"
+import {mdiBackspace, mdiServerNetwork} from "@mdi/js"
 import SectionTitleLineWithButton from "@/Components/Layout/SectionTitleLineWithButton.vue";
 import SectionMain from "@/Components/Layout/SectionMain.vue";
 import {useI18n} from 'vue-i18n';
@@ -29,22 +29,14 @@ const submit = () => {
 
 
 <template>
-    <Head :title="t('auth.user.title.edit')"/>
+    <Head :title="t('setting.adobe_server.title')"/>
 
         <SectionMain>
             <SectionTitleLineWithButton
-                :icon="mdiAccountEdit"
-                :title="t('auth.user.title.edit')"
+                :icon="mdiServerNetwork"
+                :title="t('setting.adobe_server.title')"
                 main
             >
-                <BaseButton
-                    :href="route('profile.view')"
-                    :icon="mdiBackspace"
-                    :label="t('general.back')"
-                    color="info"
-                    rounded-full
-                    small
-                />
             </SectionTitleLineWithButton>
 
             <div class="py-12 dark:bg-slate-900 rounded">

@@ -144,7 +144,8 @@ class InertiaTableExtended
         bool $hidden = false,
         bool $sortable = false,
         bool $selectable = false,
-        bool $searchable = false
+        bool $searchable = false,
+        bool $isUrl = false,
     ): self {
         $key         = $key ?: Str::kebab($label);
         $label       = $label ?: Str::headline($key);
@@ -158,6 +159,7 @@ class InertiaTableExtended
             hidden: $hidden,
             sortable: $sortable,
             selectable: $selectable,
+            isUrl: $isUrl,
             sorted: false
         ))->values();
 
@@ -191,11 +193,12 @@ class InertiaTableExtended
      */
     public function searchInput(string $key, ?string $label = null, ?string $defaultValue = null): self
     {
-        $this->searchInputs = $this->searchInputs->reject(fn (SearchInput $searchInput) => $searchInput->key === $key)->push(new SearchInput(
-            key: $key,
-            label: $label ?: Str::headline($key),
-            value: $defaultValue
-        ))->values();
+        $this->searchInputs = $this->searchInputs->reject(fn (SearchInput $searchInput) => $searchInput->key === $key)
+            ->push(new SearchInput(
+                key: $key,
+                label: $label ?: Str::headline($key),
+                value: $defaultValue
+            ))->values();
 
         return $this;
     }

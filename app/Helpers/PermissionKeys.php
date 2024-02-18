@@ -14,6 +14,10 @@ class PermissionKeys
     public const USERS_ROLE_CREATE = 'users.role.create';
     public const USERS_ROLE_UPDATE = 'users.role.update';
     public const USERS_ROLE_DELETE = 'users.role.delete';
+    public const ADOBE_CONNECT_RECORDING_VIEW = 'adobe-connect.recording.view';
+    public const ADOBE_CONNECT_RECORDING_CREATE = 'adobe-connect.recording.create';
+    public const ADOBE_CONNECT_RECORDING_UPDATE = 'adobe-connect.recording.update';
+    public const ADOBE_CONNECT_RECORDING_DELETE = 'adobe-connect.recording.delete';
     public const SETTINGS_ADOBE_SERVER_VIEW = 'settings.adobe-server.view';
     public const SETTINGS_ADOBE_SERVER_UPDATE = 'settings.adobe-server.update';
     public const REPORTS_REPORT_VIEW = 'reports.report.view';

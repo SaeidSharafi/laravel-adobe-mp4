@@ -1,4 +1,15 @@
 export default {
+    "adobe_connect": {
+        "recordings": "جلسات ضبط شده",
+        "scoid": "کد SCO",
+        "foldername": "نام پوشه",
+        "url": "لینک جلسه ضبط شده",
+        "datecreated": "تاریخ ایجاد",
+        "meetingurl": "لینک جلسه",
+        "meetingname": "نام جلسه",
+        "recordingname": "نام جلسه ضبط شده",
+        "duration": "مدت زمان"
+    },
     "app": {
         "title": "پیشخوان تحلیل داده‌ها",
         "version": "نسخه {version}",
@@ -18,6 +29,14 @@ export default {
                 "dashboard": "میز کار",
                 "users": "کاربران",
                 "roles": "نقش ها",
+                "adobe-connect": {
+                    "parent": "ادوبی",
+                    "recording": "جلسات ضبط شده"
+                },
+                "settings": {
+                    "parent": "تنظیمات",
+                    "adobe-server": "سرور ادوبی"
+                },
                 "reports": {
                     "parent": "گزارشات",
                     "logs": "فعالیت ها"
@@ -242,6 +261,14 @@ export default {
                     "success": "پروفایل شما با موفقیت ویرایش شد."
                 }
             }
+        }
+    },
+    "setting": {
+        "adobe_server": {
+            "title": "تنظیمات سرور ادوبی",
+            "server_address": "آدرس سرور ادوبی",
+            "username": "نام کاربری",
+            "password": "رمز عبور"
         }
     },
     "validation": {

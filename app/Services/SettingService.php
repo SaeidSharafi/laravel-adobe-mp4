@@ -2,13 +2,14 @@
 
 namespace App\Services;
 
+use App\DTO\AdobeServerSettingDTO;
 use App\Models\Settings\Setting;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Http\Request;
 
 class SettingService
 {
-    public function formatSettingForForm(Collection|\Illuminate\Support\Collection $settings)
+    public function formatSettingForForm(Collection|\Illuminate\Support\Collection $settings) : array
     {
         $fields = [];
         foreach ($settings as $setting) {
@@ -29,6 +30,6 @@ class SettingService
             ];
         }
 
-        Setting::upsert($fields,['component','key']);
+        Setting::upsert($fields, ['component', 'key']);
     }
 }
